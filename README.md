@@ -1,8 +1,8 @@
-#Gerenciamento de Produtos – Formulário de Cadastro e Edição
+# Gerenciamento de Produtos – Formulário de Cadastro e Edição
 
 Este projeto foi desenvolvido como parte de uma atividade acadêmica para a disciplina de Desenvolvimento Web. O objetivo foi criar uma interface interativa para o gerenciamento de produtos em um supermercado, utilizando HTML, CSS (com classes do Tailwind CSS) e JavaScript.
 
-##Funcionalidades
+## Funcionalidades
 
 Alternância de Formulários: Permite alternar entre os formulários de cadastro e edição de produtos.
 
@@ -12,7 +12,7 @@ Alertas Interativos: Exibe mensagens de alerta para ações como cadastro, ediç
 
 Design Responsivo: Utiliza classes do Tailwind CSS para garantir uma interface adaptável a diferentes tamanhos de tela.
 
-##Estrutura do Projeto
+## Estrutura do Projeto
 
 index.html: Estrutura básica da página com os formulários e botões de navegação.
 
@@ -20,7 +20,7 @@ style.css: Estilos personalizados utilizando Tailwind CSS para o design da inter
 
 script.js: Lógica JavaScript para alternância de formulários, validação de campos e exibição de alertas.
 
-##Objetivos de Aprendizado
+## Objetivos de Aprendizado
 
 Aplicar conceitos de HTML5 e CSS3 no desenvolvimento de interfaces web.
 
