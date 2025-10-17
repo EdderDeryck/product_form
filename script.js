@@ -1,0 +1,1 @@
+const secCadastro = document.getElementById('sec-cadastro');
