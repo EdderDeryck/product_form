@@ -1,114 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Produtos - Supermercado</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Produtos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Gerenciamento de Produtos - Supermercado</h1>
+  <h1>Gerenciamento de Produtos - Supermercado</h1>
 
-    <!-- ==================== CADASTRO DE PRODUTOS ==================== -->
-    <section>
-        <h2>Cadastro de Produtos</h2>
-        <form id="form-cadastro" action="#" method="post">
-            <fieldset>
-                <legend>Informações do Produto</legend>
+  <div class="menu">
+    <button id="btn-cadastro">Cadastro</button>
+    <button id="btn-edicao">Edição</button>
+  </div>
 
-                <label for="nome">Nome do Produto:</label><br>
-                <input type="text" id="nome" name="nome" required><br><br>
+  <section id="sec-cadastro" class="form-container">
+    <h2>Cadastro de Produtos</h2>
+    <form id="form-cadastro">
+      <label>Nome:</label>
+      <input type="text" id="nome" required>
 
-                <label for="categoria">Categoria:</label><br>
-                <select id="categoria" name="categoria" required>
-                    <option value="">Selecione...</option>
-                    <option value="alimentos">Alimentos</option>
-                    <option value="bebidas">Bebidas</option>
-                    <option value="limpeza">Limpeza</option>
-                    <option value="higiene">Higiene</option>
-                    <option value="utilidades">Utilidades Domésticas</option>
-                </select><br><br>
+      <label>Categoria:</label>
+      <select id="categoria" required>
+        <option value="">Selecione...</option>
+        <option value="alimentos">Alimentos</option>
+        <option value="bebidas">Bebidas</option>
+        <option value="limpeza">Limpeza</option>
+        <option value="higiene">Higiene</option>
+        <option value="utilidades">Utilidades</option>
+      </select>
 
-                <label for="descricao">Descrição:</label><br>
-                <textarea id="descricao" name="descricao" rows="4" cols="40"></textarea><br><br>
+      <label>Descrição:</label>
+      <textarea id="descricao" rows="3"></textarea>
 
-                <label for="codigo">Código de Barras:</label><br>
-                <input type="text" id="codigo" name="codigo" pattern="\d{13}" placeholder="13 dígitos" required><br><br>
+      <label>Código de Barras:</label>
+      <input type="text" id="codigo" pattern="\d{13}" placeholder="13 dígitos" required>
 
-                <label for="quantidade">Quantidade em Estoque:</label><br>
-                <input type="number" id="quantidade" name="quantidade" min="0" required><br><br>
+      <label>Quantidade:</label>
+      <input type="number" id="quantidade" min="0" required>
 
-                <label for="preco">Preço Unitário (R$):</label><br>
-                <input type="number" id="preco" name="preco" min="0" step="0.01" required><br><br>
+      <label>Preço (R$):</label>
+      <input type="number" id="preco" min="0" step="0.01" required>
 
-                <label for="validade">Data de Validade:</label><br>
-                <input type="date" id="validade" name="validade"><br><br>
+      <label>Validade:</label>
+      <input type="date" id="validade">
 
-                <label for="fornecedor">Fornecedor:</label><br>
-                <input type="text" id="fornecedor" name="fornecedor"><br><br>
+      <label>Fornecedor:</label>
+      <input type="text" id="fornecedor">
 
-                <label for="imagem">Imagem do Produto:</label><br>
-                <input type="file" id="imagem" name="imagem" accept="image/*"><br><br>
+      <label>Imagem:</label>
+      <input type="file" id="imagem" accept="image/*">
 
-                <button type="submit">Cadastrar Produto</button>
-                <button type="reset">Limpar</button>
-            </fieldset>
-        </form>
-    </section>
+      <div class="botoes">
+        <button type="reset" class="btn-cinza">Limpar</button>
+        <button type="submit" class="btn-azul">Cadastrar</button>
+      </div>
+    </form>
+  </section>
 
-    <hr>
+  <section id="sec-edicao" class="form-container hidden">
+    <h2>Edição de Produtos</h2>
+    <form id="form-edicao">
+      <label>Código de Barras:</label>
+      <input type="text" id="buscar-codigo" placeholder="Digite o código">
+      <button type="button" id="btn-buscar" class="btn-roxo">Buscar</button>
 
-    <!-- ==================== EDIÇÃO DE PRODUTOS ==================== -->
-    <section>
-        <h2>Edição de Produtos</h2>
-        <form id="form-edicao" action="#" method="post">
-            <fieldset>
-                <legend>Localizar e Editar Produto</legend>
+      <hr>
 
-                <label for="buscar-codigo">Código de Barras:</label><br>
-                <input type="text" id="buscar-codigo" name="buscar-codigo" placeholder="Digite o código de barras para buscar"><br><br>
+      <label>Nome:</label>
+      <input type="text" id="editar-nome">
 
-                <button type="button">Buscar Produto</button><br><br>
-            </fieldset>
+      <label>Categoria:</label>
+      <select id="editar-categoria">
+        <option value="">Selecione...</option>
+        <option value="alimentos">Alimentos</option>
+        <option value="bebidas">Bebidas</option>
+        <option value="limpeza">Limpeza</option>
+        <option value="higiene">Higiene</option>
+        <option value="utilidades">Utilidades</option>
+      </select>
 
-            <fieldset>
-                <legend>Dados para Edição</legend>
+      <label>Descrição:</label>
+      <textarea id="editar-descricao" rows="3"></textarea>
 
-                <label for="editar-nome">Nome do Produto:</label><br>
-                <input type="text" id="editar-nome" name="editar-nome"><br><br>
+      <label>Quantidade:</label>
+      <input type="number" id="editar-quantidade" min="0">
 
-                <label for="editar-categoria">Categoria:</label><br>
-                <select id="editar-categoria" name="editar-categoria">
-                    <option value="">Selecione...</option>
-                    <option value="alimentos">Alimentos</option>
-                    <option value="bebidas">Bebidas</option>
-                    <option value="limpeza">Limpeza</option>
-                    <option value="higiene">Higiene</option>
-                    <option value="utilidades">Utilidades Domésticas</option>
-                </select><br><br>
+      <label>Preço (R$):</label>
+      <input type="number" id="editar-preco" min="0" step="0.01">
 
-                <label for="editar-descricao">Descrição:</label><br>
-                <textarea id="editar-descricao" name="editar-descricao" rows="4" cols="40"></textarea><br><br>
+      <label>Validade:</label>
+      <input type="date" id="editar-validade">
 
-                <label for="editar-quantidade">Quantidade em Estoque:</label><br>
-                <input type="number" id="editar-quantidade" name="editar-quantidade" min="0"><br><br>
+      <label>Fornecedor:</label>
+      <input type="text" id="editar-fornecedor">
 
-                <label for="editar-preco">Preço Unitário (R$):</label><br>
-                <input type="number" id="editar-preco" name="editar-preco" min="0" step="0.01"><br><br>
+      <label>Imagem:</label>
+      <input type="file" id="editar-imagem" accept="image/*">
 
-                <label for="editar-validade">Data de Validade:</label><br>
-                <input type="date" id="editar-validade" name="editar-validade"><br><br>
+      <div class="botoes">
+        <button type="reset" class="btn-cinza">Cancelar</button>
+        <button type="submit" class="btn-verde">Salvar</button>
+      </div>
+    </form>
+  </section>
 
-                <label for="editar-fornecedor">Fornecedor:</label><br>
-                <input type="text" id="editar-fornecedor" name="editar-fornecedor"><br><br>
-
-                <label for="editar-imagem">Alterar Imagem:</label><br>
-                <input type="file" id="editar-imagem" name="editar-imagem" accept="image/*"><br><br>
-
-                <button type="submit">Salvar Alterações</button>
-                <button type="reset">Cancelar</button>
-            </fieldset>
-        </form>
-    </section>
-
+  <script src="script.js"></script>
 </body>
 </html>
