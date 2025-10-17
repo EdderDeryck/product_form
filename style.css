@@ -1,2 +1,118 @@
-const secCadastro = document.getElementById('sec-cadastro');
-const secEdicao = document.getElementById('sec-edicao');
+body {
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  color: #222;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  color: #1e40af;
+  margin-bottom: 1rem;
+}
+
+.menu {
+  margin-bottom: 1.5rem;
+}
+
+.menu button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  color: white;
+  background-color: #1d4ed8;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu button:hover {
+  background-color: #2563eb;
+}
+
+.form-container {
+  background: white;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-azul {
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+}
+
+.btn-azul:hover {
+  background-color: #2563eb;
+}
+
+.btn-cinza {
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+}
+
+.btn-cinza:hover {
+  background-color: #d1d5db;
+}
+
+.btn-verde {
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+}
+
+.btn-verde:hover {
+  background-color: #22c55e;
+}
+
+.btn-roxo {
+  background-color: #6d28d9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  margin-top: 10px;
+}
+
+.btn-roxo:hover {
+  background-color: #7c3aed;
+}
+
+.hidden {
+  display: none;
+}
