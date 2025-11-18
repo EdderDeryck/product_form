@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Produtos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Gerenciamento de Produtos - Supermercado</h1>
+
+  <div class="menu">
+    <button id="btn-cadastro">Cadastro</button>
+    <button id="btn-edicao">Edição</button>
+  </div>
+
+  <section id="sec-cadastro" class="form-container">
+    <h2>Cadastro de Produtos</h2>
+    <form id="form-cadastro">
+      <label>Nome:</label>
+      <input type="text" id="nome" required>
+
+      <label>Categoria:</label>
+      <select id="categoria" required>
+        <option value="">Selecione...</option>
+        <option value="alimentos">Alimentos</option>
+        <option value="bebidas">Bebidas</option>
+        <option value="limpeza">Limpeza</option>
+        <option value="higiene">Higiene</option>
+        <option value="utilidades">Utilidades</option>
+      </select>
+
+      <label>Descrição:</label>
+      <textarea id="descricao" rows="3"></textarea>
+
+      <label>Código de Barras:</label>
+      <input type="text" id="codigo" pattern="\d{13}" placeholder="13 dígitos" required>
+
+      <label>Quantidade:</label>
+      <input type="number" id="quantidade" min="0" required>
+
+      <label>Preço (R$):</label>
+      <input type="number" id="preco" min="0" step="0.01" required>
+
+      <label>Validade:</label>
+      <input type="date" id="validade">
+
+      <label>Fornecedor:</label>
+      <input type="text" id="fornecedor">
+
+      <label>Imagem:</label>
+      <input type="file" id="imagem" accept="image/*">
+
+      <div class="botoes">
+        <button type="reset" class="btn-cinza">Limpar</button>
+        <button type="submit" class="btn-azul">Cadastrar</button>
+      </div>
+    </form>
+  </section>
+
+  <section id="sec-edicao" class="form-container hidden">
+    <h2>Edição de Produtos</h2>
+    <form id="form-edicao">
+      <label>Código de Barras:</label>
+      <input type="text" id="buscar-codigo" placeholder="Digite o código">
+      <button type="button" id="btn-buscar" class="btn-roxo">Buscar</button>
+
+      <hr>
+
+      <label>Nome:</label>
+      <input type="text" id="editar-nome">
+
+      <label>Categoria:</label>
+      <select id="editar-categoria">
+        <option value="">Selecione...</option>
+        <option value="alimentos">Alimentos</option>
+        <option value="bebidas">Bebidas</option>
+        <option value="limpeza">Limpeza</option>
+        <option value="higiene">Higiene</option>
+        <option value="utilidades">Utilidades</option>
+      </select>
+
+      <label>Descrição:</label>
+      <textarea id="editar-descricao" rows="3"></textarea>
+
+      <label>Quantidade:</label>
+      <input type="number" id="editar-quantidade" min="0">
+
+      <label>Preço (R$):</label>
+      <input type="number" id="editar-preco" min="0" step="0.01">
+
+      <label>Validade:</label>
+      <input type="date" id="editar-validade">
+
+      <label>Fornecedor:</label>
+      <input type="text" id="editar-fornecedor">
+
+      <label>Imagem:</label>
+      <input type="file" id="editar-imagem" accept="image/*">
+
+      <div class="botoes">
+        <button type="reset" class="btn-cinza">Cancelar</button>
+        <button type="submit" class="btn-verde">Salvar</button>
+      </div>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
