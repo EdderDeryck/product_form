@@ -28,6 +28,6 @@ Utilizar JavaScript para manipulação do DOM e interação com o usuário.
 
 Desenvolver habilidades em design responsivo e usabilidade.
 
-Acesse o site
+## Acesse o site
 
-[➡️ Clique aqui para visualizar](file:///home/deryck10/%C3%81rea%20de%20trabalho/IdeaProjects/formulario_produtos/src/index.html)
+[➡️ Clique aqui para visualizar](https://EdderDeryck.github.io/product_form/)
